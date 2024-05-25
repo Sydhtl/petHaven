@@ -9,6 +9,7 @@
 
 body {
     background-color: #EDEBD2;
+    overflow-y: scroll;
 }
 
 .navbar {
