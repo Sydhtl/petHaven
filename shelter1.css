@@ -1,0 +1,97 @@
+body {
+    background-color: #EDEBD2; 
+    
+}
+.banner img {
+    width: 1920px; 
+    height: 450px;
+    object-fit: cover; 
+}
+
+.imageContainer {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.shelterText {
+    position: absolute;
+    top: 50%;
+    left: 5%; 
+    transform: translateY(-50%);
+    color: white;
+    font-size: 25px;
+}
+
+.filterContainer {
+    position: absolute;
+    top: 90%;
+    left: 15%;
+    padding-left: 30px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50px;
+    width: 70%;
+}
+
+.row {
+    padding-left: 30px;
+}
+.columnFilter {
+    margin-right: 10px; 
+}
+.circleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #FABEE2;
+    border: 5px solid black;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 0px; 
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+.container{
+    position:relative;
+   padding-top: 100px;
+   
+
+}
+.textTitle{
+    position: relative;
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+.columnShelter {
+    background-color: white;
+    border: 2px solid #E4D2D2;
+    margin: 5px;
+    flex: 1;
+}
+.columnShelter img {
+    width: 100%;
+    padding: 0;
+     
+}
+
+.shelterTitle{
+    text-align: center;
+    font-size: 100%;
+}
+
+.containerTitle{
+    background-color: #E4D2D2 ; 
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
