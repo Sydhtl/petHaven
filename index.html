@@ -51,30 +51,109 @@
   <div class="banner position-relative d-flex align-items-center justify-content-center">
     <img src="assets/images/pets-banner.png" alt="Banner" class="img-fluid" />
     <div class="position-absolute text-center">
-      <button class="btn btn-dark me-2">ADOPT NOW</button>
-      <button class="btn btn-dark">DONATE</button>
+      <button class="btn btn-dark btn-lg me-2">ADOPT NOW</button>
+      <!--<button class="btn btn-dark btn-lg">DONATE</button>-->
     </div>
   </div>
+
+  <div class="countdown-container container text-center py-5 mt-5">
+    <h2 class="mb-4">INTERNATIONAL ANIMAL DAY</h2>
+    <div class="row">
+      <div class="col countdown-item">
+        <h3 id="days">00</h3>
+        <p class="text-uppercase">Days</p>
+      </div>
+      <div class="col countdown-item">
+        <h3 id="hours">00</h3>
+        <p class="text-uppercase">Hours</p>
+      </div>
+      <div class="col countdown-item">
+        <h3 id="minutes">00</h3>
+        <p class="text-uppercase">Minutes</p>
+      </div>
+      <div class="col countdown-item">
+        <h3 id="seconds">00</h3>
+        <p class="text-uppercase">Seconds</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var countDownDate = new Date("Oct 4, 2024 00:00:00").getTime();
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+      }
+    }, 1000);
+  </script>
 
   <div id="care-section" class="container-fluid mt-5">
     <h1 class="care-title text-center">HOW TO TAKE CARE OF PETS</h1>
-    <div class="row">
-      <div class="image-container col-md-4 col-sm-12 mb-2 d-flex align-items-stretch">
-        <img src="assets/images/dog.png" alt="Dog" class="img-fluid care-img" data-toggle="modal" data-target="#dogModal">
-        <div class="image-label label-dog">Dog ></div>
+    <div class="row no-gutters">
+      <div class="image-container col-md-4 col-sm-12">
+        <img src="assets/images/dog.png" alt="Dog" class="img-fluid care-img" data-toggle="modal"
+          data-target="#dogModal">
       </div>
-      <div class="image-container col-md-4 col-sm-12 mb-2 d-flex align-items-stretch">
-        <img src="assets/images/cat.png" alt="Cat" class="img-fluid care-img" data-toggle="modal" data-target="#catModal">
-        <div class="image-label label-cat">Cat ></div>
+      <div class="image-container col-md-4 col-sm-12">
+        <img src="assets/images/cat.png" alt="Cat" class="img-fluid care-img" data-toggle="modal"
+          data-target="#catTipsModal">
+        <div class="modal fade" id="catTipsModal" tabindex="-1" role="dialog" aria-labelledby="catTipsModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document"> <!-- Add modal-lg to make the modal wider -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title" id="catTipsModalLabel">How do I take care of a Cat?</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body px-4"> <!-- Add px-4 to add horizontal padding -->
+                <p>
+                  Basic Tips Caring for Your Cat
+                <ul>
+                  <li>Provide a balanced diet with high-quality cat food.</li>
+                  <li>Ensure access to fresh water at all times.</li>
+                  <li>Schedule regular vet check-ups and vaccinations.</li>
+                  <li>Create a stimulating environment with toys and scratching posts.</li>
+                  <li>Groom daily to reduce shedding and prevent hairballs.</li>
+                  <li>Keep the litter box clean to maintain good hygiene</li>
+                </ul>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark">Adopt Now</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="image-container col-md-4 col-sm-12 mb-2 d-flex align-items-stretch">
-        <img src="assets/images/rabbit.png" alt="Rabbit" class="img-fluid care-img" data-toggle="modal" data-target="#rabbitModal">
-        <div class="image-label label-rabbit">Rabbit ></div>
+      <div class="image-container col-md-4 col-sm-12">
+        <img src="assets/images/rabbit.png" alt="Rabbit" class="img-fluid care-img" data-toggle="modal"
+          data-target="#rabbitModal">
       </div>
     </div>
   </div>
 
-  <div class="feedback-container text-center mt-5">
+  <div class="feedback-container text-center mt-2">
     <div class="feedback-section">
       <h2 class="mb-4">Your Feedback Matters</h2>
       <p class="mb-4">We'd love to hear from you. Please share your feedback with us.</p>
@@ -100,10 +179,43 @@
       </ul>
       <div class="tab-content">
         <div class="tab-pane fade show active" id="adoption">
-          <p>Adoption content goes here.</p>
+          <p>
+          <ul>
+            <li>Visit our shelter or website to view available pets.</li>
+            <li>Fill out an adoption application form.</li>
+            <li>Meet and greet the pet you're interested in.</li>
+            <li>Complete an adoption interview with our staff.</li>
+            <li>Pay the adoption fee and finalize the paperwork.</li>
+            <li>Take your new pet home!</li>
+          </ul>
+          </p>
         </div>
         <div class="tab-pane fade" id="shelter">
-          <p>Shelter content goes here.</p>
+          <p>
+          <ol>
+            <li>How do I know your shelter is trustworthy?</li>
+            <ul>
+              <li>
+                Our shelter is a registered non-profit organization dedicated to the welfare of animals. We adhere to
+                strict ethical standards and are transparent about our operations and finances. Our mission is to
+                rescue, rehabilitate, and rehome animals in need.
+              </li>
+            </ul>
+            <li>Are the animals in your shelter rescued?</li>
+            <ul>
+              <li>Yes, all our animals are rescued from various situations such as abandonment, neglect, or being
+                surrendered by owners who can no longer care for them. We provide them with the care and love they need
+                to thrive.</li>
+            </ul>
+            <li>What happens if an animal is not adopted?</li>
+            <ul>
+              <li>We are a no-kill shelter, meaning we do not euthanize healthy or treatable animals. Pets stay with us
+                as long as it takes to find them a loving home. Meanwhile, they continue to receive the best care
+                possible.
+                how to make this into a unordered list that looks nice </li>
+            </ul>
+          </ol>
+          </p>
         </div>
         <div class="tab-pane fade" id="refunds">
           <p>What are the refund conditions?
@@ -117,6 +229,8 @@
 
         <div class="tab-pane fade mt-3" id="contact">
           <div class="row justify-content-center">
+            <p>Fill out the form below with your details and inquiry.
+              Our friendly staff will get in touch with you shortly.</p>
             <div class="col-md-8">
               <form class="contact-form">
                 <div class="mb-3">
@@ -147,7 +261,7 @@
     <div class="container">
       <div class="row">
         <div class="contact-info col-md-6">
-          <h5 class="mb-3">Pet Shelter</h5>
+          <h5 class="mb-3">Pet Haven</h5>
           <p>1234 Pet Street, Pet City, 56789</p>
           <p>Email: info@petshelter.com | Phone: 123-456-7890</p>
         </div>
@@ -170,7 +284,7 @@
           </nav>
         </div>
         <div class="col-md-6 text-md-right">
-          <p>© 2022 Pet Shelter. All rights reserved.</p>
+          <p>© 2024 Pet Haven. All rights reserved.</p>
         </div>
       </div>
     </div>

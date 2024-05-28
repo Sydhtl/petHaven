@@ -37,7 +37,6 @@ body {
 
 .navbar-nav .nav-item.active .nav-link {
     color: #e4d2d2 !important;
-    /* Change this to your desired color */
 }
 
 .heading h1 {
@@ -71,22 +70,77 @@ body {
 }
 
 .banner .position-absolute .btn {
-    background-color: #000000;
-    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    background-color: #e4d2d2;
+    color: #333;
     border: none;
+    margin-bottom: -10px ;
+    margin-right: 0px;
+}
+
+.modal-content {
+    border-radius: 10px; 
+}
+
+.modal-header {
+    background-color: #333;
+    border-bottom: none; 
+}
+
+.close {
+    color: #fff; 
+    opacity: 1; 
+    font-size: 1.5em; 
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20;
+    color: #fff; 
+}
+
+.modal-body p {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    color: #333; 
+    line-height: 1.5; 
+}
+
+.modal-body ul {
+    list-style-type: disc; 
+    padding-left: 40px; 
+}
+
+.modal-body ul li {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.2em; 
+    color: #333; 
+    line-height: 1.5; 
 }
 
 .feedback-section h2 {
     font-family: 'Playfair Display', serif;
+    font-size: 40px;    
     color: #000000;
+}
+
+.feedback-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
 }
 
 .feedback-container .btn {
     color: #ffffff;
-    background-color: #000000;
-    border-radius: 20px;
+    background-color: #333;
+    border-radius: 25px;
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .feedback-container .btn:focus {
@@ -100,7 +154,6 @@ body {
     color: #000000;
     opacity: 0.55;
 }
-
 
 .help-container .nav-link.active {
     border: none;
@@ -118,6 +171,35 @@ body {
 
 .help-container .nav-link:hover {
     color: #dd3b40;
+}
+
+.tab-content {
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.5; 
+    padding: 20px; 
+}
+
+.tab-content ul, .tab-content ol {
+    list-style-position: inside; 
+    padding-left: 30px;
+}
+
+.tab-content ul li, .tab-content ol li {
+    font-size: 1em; 
+    margin-bottom: 10px; 
+}
+
+.tab-content ol li {
+    font-weight: bold;
+}
+
+.tab-content ul li {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.tab-content p {
+    margin-bottom: 20px; 
 }
 
 .contact-form {
@@ -151,16 +233,22 @@ body {
 
 .image-container {
     position: relative;
+    padding: 0;
+    margin: 0;
     height: 100vh;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .care-img {
     width: 100%;
     height: 100%;
+    padding: 0;
+    margin: 0;
     object-fit: cover;
     transition: transform 0.3s ease;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .care-img:hover {
@@ -175,3 +263,46 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.countdown-container {
+    border-radius: 100px;
+    background: #e4d2d2;
+    color: #333; 
+    padding: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.countdown-item {
+    border-right: 1px solid #dee2e6; 
+    padding: 20px;
+}
+
+.countdown-item:last-child {
+    border-right: none;
+}
+
+.countdown-item h3 {
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.countdown-item p {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer.bg-dark.text-white.py-4.mt-5 {
+    background-color: #000000 !important;
+    font-family: 'Poppins', sans-serif; 
+}
