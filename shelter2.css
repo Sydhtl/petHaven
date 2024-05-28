@@ -2,17 +2,7 @@ body {
     background-color: #EDEBD2;
 }
 
-.banner img {
-    width: 1920px;
-    height: 450px;
-    object-fit: cover;
-}
 
-.imageContainer {
-    position: relative;
-    padding: 0px;
-    margin: 0px;
-}
 
 .roundContainer {
     border-radius: 15px;
@@ -28,14 +18,15 @@ body {
 }
 
 .filterContainer {
-    position: absolute;
-    top: 90%;
+    position: fixed;
+    top: 7%;
     left: 15%;
     padding-left: 30px;
     border: 2px solid black;
     background-color: white;
     border-radius: 50px;
     width: 70%;
+    z-index: 2;
 }
 
 .row {
@@ -76,7 +67,7 @@ body {
     padding-bottom: 10px;
     font-size: 30px;
 }
-.buttonContainer {
+.nextContainer {
     position: relative;
    margin: 20px;
     font-size: 15px;
@@ -113,8 +104,11 @@ body {
 }
 
 .navbar {
+    top: 0;
     height: 50px;
     background-color: black !important;
+    position: fixed;
+    z-index: 2;
 }
 
 .navbar-nav .nav-link {
@@ -153,7 +147,7 @@ body {
 .card {
     position: relative;
     width: fit-content;
-    
+    /* transition: transform 0.3s ease;*/
 }
 
 .container2 {
@@ -193,7 +187,6 @@ body {
     transform: scale(1.1);
     cursor: pointer;
     border: 2px solid black;
-    src: url('image/Happy-dog.jpg')
 }
  .card:hover .container2{
     cursor: pointer;
@@ -212,4 +205,6 @@ body {
     width: 170px;
 
 }
-
+.buttonBothNextPrev{
+   padding: 30px;
+}
