@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 body {
     background-color: #EDEBD2;
+    font-family: 'Poppins', sans-serif;
+        font-size: 22px;
 }
 
 .banner img {
@@ -113,6 +119,14 @@ body {
 }
 
 .navbar {
+    top: 0;
+    height: 50px;
+    background-color: black !important;
+    position: fixed;
+    z-index: 2;
+}
+
+.navbar {
     height: 50px;
     background-color: black !important;
 }
@@ -131,12 +145,20 @@ body {
 }
 
 .navbar-nav .nav-link.active {
-    background-color: transparent !important;
+    background-color: black !important;
     border-radius: 5px;
 }
 
 .navbar-nav .nav-item.active .nav-link {
-    color: #e4d2d2 !important;
+    color: #000000 !important;
+    
+}
+.nav-item.active .nav-link {
+    background-color: #EDEBD2;
+    padding: 12px 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: black !important;
 }
 
 
