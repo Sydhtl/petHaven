@@ -37,11 +37,37 @@
           <a class="nav-link" href="#">HELP</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">LOGIN</a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">LOGIN</a>
         </li>
       </ul>
     </div>
   </nav>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="heading text-center">
     <h1>PET HAVEN</h1>
@@ -117,7 +143,7 @@
           data-target="#catTipsModal">
         <div class="modal fade" id="catTipsModal" tabindex="-1" role="dialog" aria-labelledby="catTipsModalLabel"
           aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document"> <!-- Add modal-lg to make the modal wider -->
+          <div class="modal-dialog modal-lg" role="document"> 
             <div class="modal-content">
               <div class="modal-header">
                 <h1 class="modal-title" id="catTipsModalLabel">How do I take care of a Cat?</h1>
@@ -125,7 +151,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body px-4"> <!-- Add px-4 to add horizontal padding -->
+              <div class="modal-body px-4"> 
                 <p>
                   Basic Tips Caring for Your Cat
                 <ul>
